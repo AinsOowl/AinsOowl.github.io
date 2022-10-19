@@ -1,0 +1,415 @@
+@import "colors";
+main.container.body {
+  max-width: 1400px !important;
+}
+.container {
+  max-width: none !important;
+}
+h1 {
+  font-size: 2.5rem;
+  padding: 30px 0;
+  font-family: 'Baskervville', serif;
+}
+h2 {
+  font-size: 2.25rem;
+  padding: 30px 0;
+  font-family: 'Baskervville', serif;
+}
+h3 {
+  font-size: 2rem;
+  padding: 20px 0;
+  font-family: 'Baskervville', serif;
+}
+h4 {
+  font-size: 1.75rem;
+  padding: 20px 0;
+  font-family: 'Baskervville', serif;
+}
+h5 {
+  font-size: 1.5rem;
+  padding: 15px 0;
+  font-family: 'Baskervville', serif;
+}
+h6 {
+  font-size: 1.25rem;
+  padding: 10px 0;
+  font-family: 'Baskervville', serif;
+}
+section {
+  margin-bottom: 50px !important;
+}
+.sous-ligne {
+  position: relative;
+  width: fit-content;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      $dore-cl 24%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 27%,
+      #ffffff 28%,
+      #fff 100%
+    );
+    position: absolute;
+  }
+}
+
+.btn-haut{
+  padding: 10px;
+  position: fixed;
+  transition: all ease 0.3s;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  transform: translateX(200px);
+  svg{
+    transition: all ease 0.3s;
+    fill: $dore;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover{
+    svg{
+      fill: $dore-cl;
+    }
+  }
+}
+.trans{
+  transform: translateX(0)!important;
+}
+/* a{
+  font-family: 'Baskervville', serif;
+} */
+body {
+  font-family: 'Baskervville', serif;
+  color: white;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $black-cl;
+  font-size: 16px;
+  section.banner {
+    width: 95%;
+    height: 50vh;
+    margin-top: 50px;
+    box-shadow: 0px 0px 30px -5px #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      position: absolute;
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 4;
+    }
+    .titre-gal {
+      display: flex;
+      width: fit-content;
+      cursor: default;
+      z-index: 5;
+      padding-bottom: 10px;
+    }
+  }
+  .fond{
+    background-image: url(../css/img/motif-fond.png);
+    background-repeat: repeat;
+    mix-blend-mode: color-dodge;
+    z-index: -10;
+    position: absolute;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+  }
+  main.body {
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 100px 50px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    section.intro {
+      box-shadow: 0px 0px 30px -5px #000;
+      height: 85vh;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 30px;
+      .img-intro {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 0;
+        filter: brightness(0.7);
+        z-index: -1;
+      }
+      h1 {
+        z-index: 5;
+        text-align: center;
+        position: relative;
+        display: block;
+        padding: 0 0 7px 0;
+        &::first-letter {
+          color: $dore-cl;
+        }
+      }
+      .scroll {
+        writing-mode: vertical-rl;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        height: 135px;
+        a {
+          color: white;
+          text-decoration: none;
+          transition: all ease 0.3s;
+          &:hover{
+            cursor: pointer;
+            color: $dore-cl;
+          }
+        }
+        &::after {
+          content: "";
+          width: 2px;
+          height: 50px;
+          background-color: white;
+          margin-top: 15px;
+          transform: scaleY(0.5);
+          transition: all ease 0.3s;
+          transform-origin: top;
+        }
+        &:hover{
+          &::after{
+            transform: scaleY(1);
+          }
+        }
+      }
+      .reservation {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: fit-content;
+        padding: 0;
+        &:hover {
+          &::after{
+            transform: scaleX(1);
+          }
+        }
+        &::after {
+          content: "";
+          height: 2px;
+          width: 50px;
+          background-color: white;
+          margin-left: 15px;
+          transform: scaleX(0.5);
+          transform-origin: left;
+          transition: all ease 0.3s;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          transition: all ease 0.3s;
+          &:hover{
+            cursor: pointer;
+            color: $dore-cl;
+          }
+        }
+      }
+    }
+    section.part2 {
+      width: 100vw;
+      min-height: 500px;
+      .box-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .box {
+          height: 400px;
+          padding: 0;
+          margin: 20px 0;
+          a.box-lien {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            img.img-box {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              filter: brightness(0.5);
+              object-fit: cover;
+              object-position: center;
+              z-index: -1;
+              transition: all ease 0.3s;
+            }
+            .cont-box {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              .titre-box {
+                position: relative;
+                width: fit-content;
+                transition: all ease 0.3s;
+                padding: 10px 0;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: white;
+                  transform: scaleX(0);
+                  transition: all ease 0.3s;
+                }
+              }
+              svg {
+                fill: white;
+                transform: rotate(90deg);
+                width: 15px;
+                height: 15px;
+                margin-top: 10px;
+                transition: all ease 0.3s;
+              }
+            }
+            .descr-box {
+              width: 80%;
+              position: absolute;
+              bottom: -50%;
+              height: auto;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+              padding: 10px;
+              transition: all ease 0.3s;
+              text-align: center;
+            }
+          }
+          &:hover {
+            img.img-box {
+              transform: scale(1.1);
+              filter: brightness(0.7) !important;
+            }
+            a.box-lien {
+              .titre-box {
+                color: $dore-cl;
+                &::after {
+                  transform: scaleX(1);
+                  background-color: $dore-cl;
+                }
+              }
+              svg {
+                transform: translateY(-20px) rotate(90deg);
+                opacity: 0;
+              }
+              .descr-box {
+                bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .presentation {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .img-cont {
+        .img-pres {
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+          max-height: 750px;
+          filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.483));
+        }
+      }
+      .text-pres {
+        box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.7);
+        color: white;
+        position: relative;
+        background-color: $black;
+        padding: 20px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: $dore;
+          left: -50%;
+          top: -100px;
+          z-index: -5;
+          background-image: url(../css/img/motif-fond-3-b.png);
+          background-repeat: repeat;
+          background-position: center;
+          background-blend-mode: soft-light;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 70px;
+          height: 70%;
+          bottom: 0;
+          right: 0;
+          border-bottom: solid 3px $dore;
+          border-right: solid 3px $dore;
+        }
+        h3 {
+          padding: 7px 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

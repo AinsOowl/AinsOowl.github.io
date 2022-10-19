@@ -1,0 +1,191 @@
+@import "colors";
+
+main.container {
+  overflow: hidden;
+  .cont-form {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    transform: scale(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all ease 0.3s;
+    .fond-form {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+    }
+    form.reservation {
+      background-color: $bleu-fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      z-index: 99;
+      transition: all ease 0.3s;
+      h2 {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        &::first-letter {
+          color: $dore-cl;
+        }
+      }
+      .input-cont {
+        flex-wrap: wrap;
+        .input-div {
+          input {
+            width: 100%;
+            padding: 5px;
+          }
+        }
+      }
+      .btn-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        button {
+          background-color: $dore;
+          color: white;
+          border: none;
+          width: fit-content;
+          padding: 10px 30px;
+          border: solid 2px $dore;
+          transition: all ease 0.3s;
+          border-radius: 0.5vh;
+          &:hover {
+            color: $dore;
+            background-color: white;
+            box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+          }
+        }
+        &::before {
+          content: "* champs obligatoire";
+          color: $dore-cl;
+          font-style: italic;
+        }
+      }
+      .obg {
+        display: flex;
+        &::after {
+          content: "*";
+          color: $dore-cl;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  section.info-stage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  video {
+    width: 70%;
+    height: auto;
+  }
+  .presentation-stage {
+    width: 70%;
+    margin-top: 30px;
+  }
+  section.banner-stages {
+    background-image: url(../../uploads/images/gal-8.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 95%;
+    height: 50vh;
+    margin-top: 30px;
+    box-shadow: 0px 0px 30px -5px #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 4;
+    }
+    .titre-banner {
+      display: flex;
+      width: fit-content;
+      cursor: default;
+      z-index: 5;
+      padding-bottom: 10px;
+    }
+  }
+  section.stages {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .stages-cont {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      .stage-block {
+        position: relative;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        padding: 20px 30px;
+        margin: 10px 0px;
+        .img-stage {
+          object-fit: cover;
+          object-position: center;
+          position: absolute;
+          width: calc(100% - 20px);
+          top: 10px;
+          height: 100%;
+          z-index: -10;
+          filter: brightness(0.8);
+        }
+        .titre-stage {
+          color: white;
+        }
+        .descr-stage {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 15px;
+          color: white;
+        }
+      }
+    }
+    button {
+      margin-top: 30px;
+      background-color: $dore;
+      border: none;
+      padding: 10px 50px;
+      transition: all ease 0.3s;
+      color: white;
+      border: solid 2px $dore;
+      border-radius: 0.5vh;
+      &:hover {
+        background-color: white;
+        color: $dore;
+      }
+    }
+  }
+}
+
+.scale {
+  transform: scale(1) !important;
+}

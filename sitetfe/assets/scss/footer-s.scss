@@ -1,0 +1,128 @@
+/* debut du footer */
+@import "colors";
+.pl-0 {
+  padding-left: 0;
+}
+footer {
+  padding: 20px 20px 20px 0;
+  position: relative;
+  border-top: solid 1px white;
+  &.container {
+    padding: 20px 20px 20px 0;
+  }
+  .footer-info {
+    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    &::after {
+      content: "© BLABLABLA/ Elliot";
+      font-style: italic;
+      margin-top: 50px;
+      color: $dore-cl;
+    }
+    .footer-section-droite {
+      justify-content: center;
+      border-left: solid 2px rgb(115, 115, 115);
+    }
+    .footer-section {
+        flex-wrap: column;
+      text-align: center;
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .retour-haut {
+        width: 50px;
+        height: 50px;
+        right: 50px;
+        .fleche {
+          background-image: url(../css/img/fleche-b.png);
+          width: 50px;
+          height: 50px;
+          background-size: cover;
+          object-fit: cover;
+          -webkit-transform: rotate(-90deg);
+          -moz-transform: rotate(-90deg);
+          -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          -webkit-transition: all 0.3s ease !important;
+          -moz-transition: all 0.3s ease !important;
+          -ms-transition: all 0.3s ease !important;
+          -o-transition: all 0.3s ease !important;
+          transition: all 0.3s ease !important;
+        }
+      }
+      .bouton {
+        display: flex;
+        align-items: center;
+      }
+      h5 {
+        position: relative;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        &::after {
+          content: "";
+          background-color: white;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      &.logo-footer{
+        margin-top: 0;
+        object-fit: contain;
+        object-position: center;
+        height: fit-content;
+        img{
+          height: fit-content;
+        max-width: 100%;
+        }
+      }
+    }
+  }
+}
+.shadow {
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+}
+.mt-0 {
+  margin-top: 0;
+}
+/* fin du footer */
+@media (max-width: 991px) {
+  .pad-lg-0 {
+    padding: 0 !important;
+  }
+  footer {
+    .footer-info {
+      div {
+        .info-footer-cont {
+          .footer-section-droite {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+}
+.bs-g{
+  --bs-gutter-x: none;
+}
+@media(min-width:991px){
+  .pr-lg{
+    padding-right: 10px;
+  }
+  .pl-lg{
+    padding-left: 10px;
+  }
+}
+@media(max-width:991px){
+  iframe{
+    height: 50vh;
+  }
+}

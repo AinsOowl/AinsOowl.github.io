@@ -1,0 +1,150 @@
+@import "colors";
+
+main.container {
+  section.about-cont {
+    padding: 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+      max-height: 70vh;
+      object-fit: contain;
+      object-position: center;
+      float: left;
+      padding-right: 20px;
+    }
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 70%;
+        background-color: $dore-cl;
+        left: -3px;
+        bottom: -3px;
+        z-index: -5;
+      }
+      .carre {
+        background-image: url(../css/img/motif1.png);
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        bottom: -100px;
+        right: -100px;
+        z-index: -5;
+      }
+      .titre-cont {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 30px;
+        h1 {
+          display: block;
+          padding: 0;
+          padding-right: 30px;
+          min-width: fit-content;
+          &::first-letter {
+            color: $dore;
+          }
+        }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 3px;
+          background-color: $dore;
+          z-index: -5;
+        }
+      }
+      .text-about {
+        background-color: $black;
+        padding: 30px;
+      }
+    }
+  }
+  section.contact-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 100px 0;
+    background-color: $bleu-fc;
+    position: relative;
+
+    .form-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      h2 {
+        display: block;
+        &::first-letter {
+          color: $dore-cl;
+        }
+      }
+      .input-cont {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .input-div {
+        input,
+        textarea {
+          width: 100%;
+          padding: 5px;
+        }
+      }
+      .btn-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        button {
+          background-color: $dore-cl;
+          color: $bleu-fc;
+          border: none;
+          width: fit-content;
+          padding: 10px 30px;
+
+          transition: all ease 0.3s;
+          &:hover {
+            color: $dore-cl;
+            background-color: $bleu-fc;
+            box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+          }
+        }
+        &::before {
+          content: "* champs obligatoire";
+          color: $dore-cl;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+.obg {
+  display: flex;
+  &::after {
+    content: "*";
+    color: $dore-cl;
+    margin-left: 5px;
+  }
+}
+.plr-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+@media (max-width: 991px) {
+  .pd-lg-0 {
+    padding: 0 !important;
+  }
+}

@@ -1,0 +1,66 @@
+@import "colors";
+main.container-detail-photo {
+  section.detail-photo {
+    margin-top: 30px;
+    .photo-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      .photo {
+        object-fit: contain;
+        object-position: center;
+        height: fit-content;
+        padding: 0;
+        max-height: 65vh;
+      }
+      .cont-text {
+        padding: 50px;
+        background-color: $black;
+        position: relative;
+        margin-top: 30px;
+        .carre {
+          position: absolute;
+          background-image: url(../css/img/motif1.png);
+          width: 200px;
+          height: 200px;
+          top: -100px;
+          right: -100px;
+          background-size: cover;
+          background-position: center;
+          z-index: -2;
+        }
+        .titre-photo {
+          display: block;
+          padding-top: 0;
+          &::first-letter {
+            color: $dore;
+          }
+        }
+        .date-photo {
+          text-decoration: underline;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 30%;
+          height: 70%;
+          bottom: -20%;
+          left: -10%;
+          background-color: $dore;
+          z-index: -2;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40%;
+          height: 70%;
+          border: solid 3px $dore;
+          bottom: -3px;
+          right: -3px;
+          z-index: -2;
+        }
+      }
+    }
+  }
+}
