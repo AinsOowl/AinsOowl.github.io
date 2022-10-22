@@ -95,6 +95,7 @@ section.sect-pres{
     .comp-cont{
         padding: 20px;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.4);
         border-radius: 2vh;
         margin: 50px;
