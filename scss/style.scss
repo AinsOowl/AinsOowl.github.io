@@ -215,18 +215,16 @@ footer{
     .titre-footer{
         text-align: center;
     }
-    .contact{}
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
     form{
         input, textarea{
             margin: 20px 0px;
             padding: 10px;
             position: relative;
             border-bottom: #ffa502 2px solid;
-        }
-        .info{
-            input{
-                
-            }
         }
     }
 }
